@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+           
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Login</h1>
+    <form method="POST" action="{% url 'login' %}" enctype="multipart/form-data">{% csrf_token %}
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <input type="submit" value="Submit" id="btn">
+    </form>
+  
+
+    <script>
+        // $(document).ready(function() {
+        //     $('#btn').on('click', function() {
+              
+        //         var username = $('#username').val();
+        //         var password = $('#password').val();
+
+        //         $.ajax({
+        //             url: '/login/',
+        //             type: 'POST',
+        //             dataType:'json',
+        //             data: { 
+        //               'username':username, 
+        //               'password':password,
+        //              },
+        //             success: function(data) {
+        //                 // alert(""+data);
+        //                 alert(""+data.status);
+        //                 if (data.status === 'authorized') {
+        //                     window.location.href = '/index/';
+        //                 } else if (data.status === 'admin') {
+        //                     window.location.href = '/prediction/';
+        //                 } else {
+        //                     alert('Unauthorized user');
+        //                 }
+        //             },
+        //             error: function(error) {
+        //                 console.error('Error:', error);
+        //             }
+        //         });
+        //     });
+
+        
+    </script>
+</body>
+</html>

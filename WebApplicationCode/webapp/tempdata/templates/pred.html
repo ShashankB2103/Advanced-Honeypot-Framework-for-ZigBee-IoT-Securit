@@ -1,0 +1,47 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Attack Logs and Intrusion Detection</title>
+    <link rel="stylesheet" href="{% static 'css/a.css'%}">
+    <style>
+    
+    
+    
+    </style>
+           
+           <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+           <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Attack Details</h1>
+    <div class="users">
+        <h3>Total users visited:{{count}}</h3>
+        <table id="table-content">
+            <thead>
+                <tr>
+                    <th>Si-No</th>
+                    <th>Ip</th>
+                    <th>Timestamp</th>
+                    <th>Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for user in users %}
+                <tr>
+                    <td>{{user.id}}</td>
+                    <td>{{user.attacker_ip}}</td>
+                    <td>{{user.timestamp}}</td>
+                    <td>{{user.attack_type}}</td> 
+                                                  
+                    </td> 
+                </tr>  
+                  {% endfor %}
+            </tbody>
+
+        </table>
+        </div>
+</body>
+</html>
